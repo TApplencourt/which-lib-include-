@@ -7,7 +7,7 @@ Which but for library.
 `whichlib [regex]`
 
 
-- `whichlib` will print all the libraries in your path (including the one in`LD_LIBRARY_PATH`). 
+- `whichlib` will print all the shared libraries in your path (including the one in`LD_LIBRARY_PATH`). 
 
 ```
 $ echo $LD_LIBRARY_PATH
