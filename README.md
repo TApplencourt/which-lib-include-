@@ -4,7 +4,10 @@ Which but for library.
 
 ## Usage
 
-`whichlib` will print all the library in your path (including the one  in`LD_LIBRARY_PATH`). 
+`whichlib [regex]`
+
+
+- `whichlib` will print all the libraries in your path (including the one in`LD_LIBRARY_PATH`). 
 
 ```
 $ echo $LD_LIBRARY_PATH
@@ -19,7 +22,7 @@ $ ./whichlib
 /lib64/libpcprofile.so
 ```
 
-`whichlib regex` will print the library from which the name matches the regex.
+- `whichlib regex` will print the library from which the name matches the regex.
 
 ```
 $ ./whichlib libc.so
