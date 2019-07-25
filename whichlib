@@ -1,0 +1,4 @@
+#!/bin/sh
+ldconfig -vNX $(echo $LD_LIBRARY_PATH | sed 's/:/ /g') 2>/dev/null |
+gawk -v p=$1 'match($0, /^(\S*):/, m)           { header=m[1] }    \
+              match($1, "^lib") && match($1, p) { print header "/" $1}'
