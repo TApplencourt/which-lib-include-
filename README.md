@@ -22,7 +22,7 @@ $ ./whichlib
 /lib64/libpcprofile.so
 ```
 
-- `whichlib regex` will print the library from which the name matches the regex.
+- `whichlib regex` will print libraries from which the name matches the regex.
 
 ```
 $ ./whichlib libc.so
