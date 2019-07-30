@@ -1,6 +1,8 @@
 # whichlib
 Which but for library.
 
+## Requirements
+- `gawk`
 
 ## Usage
 
