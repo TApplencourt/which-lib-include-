@@ -1,0 +1,4 @@
+#!/bin/sh
+
+#Print location of include file ($1) CL/cl.h
+echo "#include <$1>" | g++ -H -fsyntax-only -xc++ -std=c++11 -o /dev/null 2>&1 -c - | awk '{print $2; exit}'
