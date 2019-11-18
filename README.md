@@ -41,7 +41,7 @@ $ ./whichlib lib.*le\.so$
 Which but for include
 
 ## Requirements
-- `gcc`
+- `g++`
 
 ## Usage
 
