@@ -3,6 +3,6 @@ ldconfig -vNX $(echo $LD_LIBRARY_PATH | sed 's/:/ /g') 2>/dev/null |
 #/usr/lib32:
 #     libstdc++.so.6 -> libstdc++.so.6.0.26
 #     libgcc_s.so.1 -> libgcc_s.so.1
-awk -v p=$1 'match($1, /\S*:/)                 { header=substr($1, 1, length($1)-1)}     \
+awk -v p=$1 'match($1, ":")                    { header=substr($1, 1, length($1)-1)}  \
              match($1, "^lib") && match($1, p) { print header "/" $1}'
 #/usr/lib32/libgcc_s.so.1
