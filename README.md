@@ -38,7 +38,7 @@ $ ./whichlib lib.*le\.so$
 ```
 
 # whichinclude
-Which but for include
+Which but for header file
 
 ## Requirements
 - `g++`
