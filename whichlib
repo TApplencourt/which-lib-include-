@@ -1,9 +1,15 @@
 #!/usr/bin/sh
+# Usage:
+# $whichlib libgcc_s.so.1
+# /usr/lib32/libgcc_s.so.1 
+
 #In OpenSuse ldconfig in on /sbin
+# -v is to get the $dir then %link
+# -NX is to not rebuild the cache, because most the time we are not root
 PATH=$PATH:/sbin ldconfig -vNX $(echo $LD_LIBRARY_PATH | sed 's/:/ /g') 2>/dev/null |
 #/usr/lib32:
 #     libstdc++.so.6 -> libstdc++.so.6.0.26
 #     libgcc_s.so.1 -> libgcc_s.so.1
-awk -v p=$1 'match($1, ":$")  { header=substr($1, 1, length($1)-1)}  \
-             match($1, p)     { print header "/" $1}'
+awk -v p=$1 'match($1, ":$")  { dir=substr($1, 1, length($1)-1)}  \
+             match($1, p)     { print dir "/" $1}'
 #/usr/lib32/libgcc_s.so.1
