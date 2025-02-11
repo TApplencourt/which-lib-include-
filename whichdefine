@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+
+echo | 
+$CXX -dM -E - |
+awk -v p=$1 'match($2, p) { print $0}'
+

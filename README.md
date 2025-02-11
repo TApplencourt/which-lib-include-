@@ -38,10 +38,8 @@ $ ./whichlib lib.*le\.so$
 ```
 
 # whichinclude
-Which but for header file
 
-## Requirements
-- `g++`
+Which but for header file
 
 ## Usage
 
@@ -52,3 +50,20 @@ Which but for header file
 $ ./whichinclude omp.h
 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/omp.h
 ```
+
+# whichdefine
+
+Show all the constant `define` by your compiler
+
+## Example
+```
+tapplencourt@jlselogin6:~/which-lib-include-> CXX=g++ ./whichdefine ATOMIC
+#define __ATOMIC_ACQUIRE 2
+#define __GCC_ATOMIC_CHAR_LOCK_FREE 2
+#define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
+#define __SIG_ATOMIC_TYPE__ int
+#define __GCC_ATOMIC_BOOL_LOCK_FREE 2
+#define __GCC_ATOMIC_POINTER_LOCK_FREE 2
+#define __ATOMIC_HLE_RELEASE 131072
+```
+
